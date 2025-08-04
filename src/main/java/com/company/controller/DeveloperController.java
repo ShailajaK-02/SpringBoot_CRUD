@@ -59,5 +59,4 @@ public class DeveloperController {
         developerService.saveListDev(developerList);
         return new ResponseEntity<>("List saved",HttpStatus.OK);
     }
-
 }
