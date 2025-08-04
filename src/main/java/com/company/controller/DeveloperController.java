@@ -53,7 +53,7 @@ public class DeveloperController {
         return new ResponseEntity<>(updatedDev,HttpStatus.OK);
     }
 
-    //api to save list of object
+    //api to save list of dev
     @PostMapping("/addListData")
     public ResponseEntity<String> addListData(@RequestBody List<Developer> developerList ){
         developerService.saveListDev(developerList);
