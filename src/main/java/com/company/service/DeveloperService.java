@@ -11,4 +11,10 @@ public interface DeveloperService {
     List<Developer> getAllDev();
 
     Developer getDeveloperById(int id);
+
+    String deleteDev(int id);
+
+    Developer updateDev(int id, Developer newData);
+
+    String saveListDev(List<Developer> developers);
 }
