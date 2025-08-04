@@ -46,7 +46,7 @@ public class DeveloperController {
         return new ResponseEntity<>(msg, HttpStatus.OK);
     }
 
-    //update
+    //update data by id
     @PutMapping("/updateDev/{id}")
     public ResponseEntity<Developer> updateDev(@PathVariable("id") int id, @RequestBody Developer developer){
         Developer updatedDev = developerService.updateDev(id,developer);
@@ -59,5 +59,5 @@ public class DeveloperController {
         developerService.saveListDev(developerList);
         return new ResponseEntity<>("List saved",HttpStatus.OK);
     }
-    
+
 }
