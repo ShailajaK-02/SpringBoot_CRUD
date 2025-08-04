@@ -37,6 +37,27 @@ public class DeveloperController {
     public ResponseEntity<Developer> getById(@PathVariable("id") int id){
     Developer developer = developerService.getDeveloperById(id);
     return new ResponseEntity<>(developer, HttpStatus.OK);
-
     }
+
+    //delete by id
+    @DeleteMapping("/deleteById/{id}")
+    public  ResponseEntity<String> deleteById(@PathVariable("id") int id){
+        String msg = developerService.deleteDev(id);
+        return new ResponseEntity<>(msg, HttpStatus.OK);
+    }
+
+    //update
+    @PutMapping("/updateDev/{id}")
+    public ResponseEntity<Developer> updateDev(@PathVariable("id") int id, @RequestBody Developer developer){
+        Developer updatedDev = developerService.updateDev(id,developer);
+        return new ResponseEntity<>(updatedDev,HttpStatus.OK);
+    }
+
+    //api to save list of object
+    @PostMapping("/addListData")
+    public ResponseEntity<String> addListData(@RequestBody List<Developer> developerList ){
+        developerService.saveListDev(developerList);
+        return new ResponseEntity<>("List saved",HttpStatus.OK);
+    }
+    
 }
