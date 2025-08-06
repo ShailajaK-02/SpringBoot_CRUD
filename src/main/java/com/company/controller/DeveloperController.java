@@ -1,6 +1,7 @@
 package com.company.controller;
 
 import com.company.entity.Developer;
+import com.company.helper.GenerateDeveloperId;
 import com.company.service.DeveloperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,6 +9,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -20,9 +22,9 @@ public class DeveloperController {
     //add single data
     @PostMapping("/add")
     public ResponseEntity<String> add(@RequestBody Developer developer){
-        System.err.println(developer);
-        developerService.saveDeveloper(developer);
-        return new ResponseEntity<>("Developer added", HttpStatus.CREATED);
+         System.err.println(developer);
+         String msg = developerService.saveDeveloper(developer);
+        return new ResponseEntity<>(msg, HttpStatus.CREATED);
     }
 
     //get all data
@@ -58,5 +60,32 @@ public class DeveloperController {
     public ResponseEntity<String> addListData(@RequestBody List<Developer> developerList ){
         developerService.saveListDev(developerList);
         return new ResponseEntity<>("List saved",HttpStatus.OK);
+    }
+
+    //api to filter by city , filter by gender.
+    @GetMapping("/filter")
+    public ResponseEntity<List<Developer>> filterByCity(@RequestParam(required = false) String city,@RequestParam(required = false) String gender){
+
+        List<Developer> sortedList = new ArrayList<>();
+
+        if (city != null && gender != null) {
+            sortedList = developerService.filterByGenCity(city, gender);
+        }
+        else if(gender != null) {
+            sortedList = developerService.filterByGender(gender);
+        }
+        else if(city != null) {
+            sortedList = developerService.filterByCity(city);
+        }
+        else {
+             sortedList = developerService.getAllDev();
+        }
+
+        if(sortedList.isEmpty()){
+            String msg = "No data is found with the city :"+city +" and Gender "+gender;
+            return new ResponseEntity(msg,HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<>(sortedList,HttpStatus.OK);
     }
 }
