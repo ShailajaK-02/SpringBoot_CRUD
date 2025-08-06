@@ -16,6 +16,7 @@ public class DeveloperServiceImpl implements DeveloperService {
     @Autowired
     private DeveloperRepository developerRepository;
 
+    //save devloper
     @Override
     public String saveDeveloper(Developer developer) {
 
@@ -99,6 +100,4 @@ public class DeveloperServiceImpl implements DeveloperService {
         //dev.city!=null to handle null pointer exception
         return filterdList;
     }
-
-
 }
