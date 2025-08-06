@@ -23,4 +23,12 @@ public interface DeveloperService {
 
     //list of dev
     String saveListDev(List<Developer> developers);
+
+    //filter by city
+    List<Developer> filterByCity(String city);
+
+    List<Developer> filterByGender(String gender);
+
+    List<Developer> filterByGenCity(String city, String gender);
+
 }

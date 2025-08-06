@@ -24,6 +24,10 @@ public class Developer {
 
     private  String gender;
 
+    private String devloperId;
+
+    private int yob;
+
     public int getId() {
         return id;
     }
@@ -80,6 +84,22 @@ public class Developer {
         this.gender = gender;
     }
 
+    public String getDevloperId() {
+        return devloperId;
+    }
+
+    public void setDevloperId(String devloperId) {
+        this.devloperId = devloperId;
+    }
+
+    public int getYOB() {
+        return yob;
+    }
+
+    public void setYOB(int YOB) {
+        this.yob = YOB;
+    }
+
     @Override
     public String toString() {
         return "Developer{" +
@@ -90,6 +110,8 @@ public class Developer {
                 ", city='" + city + '\'' +
                 ", salary=" + salary +
                 ", gender='" + gender + '\'' +
+                ", devloperId='" + devloperId + '\'' +
+                ", YOB=" + yob +
                 '}';
     }
 }
