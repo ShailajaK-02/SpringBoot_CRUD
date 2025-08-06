@@ -1,12 +1,14 @@
 package com.company.serviceImpl;
 
 import com.company.entity.Developer;
+import com.company.helper.GenerateDeveloperId;
 import com.company.repository.DeveloperRepository;
 import com.company.service.DeveloperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class DeveloperServiceImpl implements DeveloperService {
@@ -16,8 +18,13 @@ public class DeveloperServiceImpl implements DeveloperService {
 
     @Override
     public String saveDeveloper(Developer developer) {
+
+        //call method from here
+        String devId = GenerateDeveloperId.generateId(developer);
+
+        developer.setDevloperId(devId);
         Developer saveDeveloper = developerRepository.save(developer);
-        return "developer saved";
+        return " Hii "+ developer.getFname()+ "Your developer Id is : " +  developer.getDevloperId();
     }
 
     @Override
@@ -58,4 +65,38 @@ public class DeveloperServiceImpl implements DeveloperService {
         List<Developer> developerList = developerRepository.saveAll(developers);
         return "List saved";
     }
+
+    //filter by city method
+    @Override
+    public List<Developer> filterByCity(String city) {
+        List<Developer> devList = developerRepository.findAll();
+
+        List<Developer> filterdList = devList.stream().filter(developer -> developer.getCity() !=null && developer.getCity().equalsIgnoreCase(city)).collect(Collectors.toList());
+
+        return filterdList;
+    }
+
+    @Override
+    public List<Developer> filterByGender(String gender) {
+        List<Developer> devList = developerRepository.findAll();
+
+        List<Developer> filterdList = devList.stream().filter(developer -> developer.getGender() != null && developer.getGender().equalsIgnoreCase(gender)).collect(Collectors.toList());
+
+        return filterdList;
+    }
+
+    @Override
+    public List<Developer> filterByGenCity(String city, String gender) {
+        List<Developer> devList = developerRepository.findAll();
+
+        List<Developer> filterdList = devList.stream().filter(developer
+                ->developer.getGender() != null && developer.getGender().equalsIgnoreCase(gender)
+                        && developer.getCity() !=null && developer.getCity().equalsIgnoreCase(city))
+                .collect(Collectors.toList());
+
+        //dev.city!=null to handle null pointer exception
+        return filterdList;
+    }
+
+
 }
