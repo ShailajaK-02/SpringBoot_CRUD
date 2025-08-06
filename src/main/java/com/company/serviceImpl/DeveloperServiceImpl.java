@@ -28,6 +28,7 @@ public class DeveloperServiceImpl implements DeveloperService {
         return " Hii "+ developer.getFname()+ "Your developer Id is : " +  developer.getDevloperId();
     }
 
+    //get all data
     @Override
     public List<Developer> getAllDev() {
        List<Developer> developerList =  developerRepository.findAll();
