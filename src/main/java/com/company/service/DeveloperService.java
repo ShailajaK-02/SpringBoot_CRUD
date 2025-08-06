@@ -27,6 +27,7 @@ public interface DeveloperService {
     //filter by city
     List<Developer> filterByCity(String city);
 
+    //filter by gender
     List<Developer> filterByGender(String gender);
 
     List<Developer> filterByGenCity(String city, String gender);
