@@ -76,6 +76,7 @@ public class DeveloperServiceImpl implements DeveloperService {
         return filterdList;
     }
 
+    //filter by gender
     @Override
     public List<Developer> filterByGender(String gender) {
         List<Developer> devList = developerRepository.findAll();
