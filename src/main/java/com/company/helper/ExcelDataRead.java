@@ -26,7 +26,7 @@ public class ExcelDataRead {
         }
     }
 
-    //This method converts excel into list
+    //This method converts excel into list of dev
     public static List<Developer> convertExcelToListOfDev(InputStream is){
 
         List<Developer> list = new ArrayList<>();
