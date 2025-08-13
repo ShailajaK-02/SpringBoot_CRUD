@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ExcelDataRead {
 
-    //check the file is of excel type or not
+    //check the file is of excel type or not method
     public static boolean checkExcelFormat(MultipartFile file){
 
         String contentType = file.getContentType();
