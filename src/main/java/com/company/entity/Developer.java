@@ -1,15 +1,24 @@
 package com.company.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 @Entity
+//lombok dependecy generate setter,getter,tostring
+@Setter
+@Getter
+@ToString
 public class Developer {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty(access= JsonProperty.Access.READ_ONLY)
+    //it ignore id while adding data over swagger and include id when getting data.
+    //other way using schema
     private int id;
 
     private String fname;
@@ -28,90 +37,4 @@ public class Developer {
 
     private int yob;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getFname() {
-        return fname;
-    }
-
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
-
-    public String getLname() {
-        return lname;
-    }
-
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public long getSalary() {
-        return salary;
-    }
-
-    public void setSalary(long salary) {
-        this.salary = salary;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getDevloperId() {
-        return devloperId;
-    }
-
-    public void setDevloperId(String devloperId) {
-        this.devloperId = devloperId;
-    }
-
-    public int getYOB() {
-        return yob;
-    }
-
-    public void setYOB(int YOB) {
-        this.yob = YOB;
-    }
-
-    @Override
-    public String toString() {
-        return "Developer{" +
-                "id=" + id +
-                ", fname='" + fname + '\'' +
-                ", lname='" + lname + '\'' +
-                ", age=" + age +
-                ", city='" + city + '\'' +
-                ", salary=" + salary +
-                ", gender='" + gender + '\'' +
-                ", devloperId='" + devloperId + '\'' +
-                ", YOB=" + yob +
-                '}';
-    }
 }
