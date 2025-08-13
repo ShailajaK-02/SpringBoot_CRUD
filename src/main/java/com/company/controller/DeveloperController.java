@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,5 +88,17 @@ public class DeveloperController {
         }
 
         return new ResponseEntity<>(sortedList,HttpStatus.OK);
+    }
+
+    //Api for uploading excel file and saving it in database
+    @PostMapping(value = "/uploadExcel", consumes = "multipart/form-data")
+    public ResponseEntity<String>  uploadExcelFile(@RequestParam("file")MultipartFile file){
+        if (file.isEmpty()){
+            return ResponseEntity.badRequest().body("Please upload a Excel file!");
+        }
+        else {
+            String msg = developerService.saveDeveloperFromExcel(file);
+            return new ResponseEntity<>(msg,HttpStatus.OK);
+        }
     }
 }
