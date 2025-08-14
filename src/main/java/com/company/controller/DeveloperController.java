@@ -3,13 +3,19 @@ package com.company.controller;
 import com.company.entity.Developer;
 import com.company.helper.GenerateDeveloperId;
 import com.company.service.DeveloperService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
-import org.springframework.http.ResponseEntity;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.function.ServerRequest;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -100,5 +106,20 @@ public class DeveloperController {
             String msg = developerService.saveDeveloperFromExcel(file);
             return new ResponseEntity<>(msg,HttpStatus.OK);
         }
+    }
+
+    //API to download excel file
+    @GetMapping("/downloadExcel")
+    public ResponseEntity<InputStreamResource> downloadFile() throws IOException{
+
+       ByteArrayInputStream in  = developerService.exportDevelopersToExcel();
+
+       HttpHeaders headers = new HttpHeaders();
+       headers.add("Content-Disposition","attachment;filename=DeveloperData.xlsx");
+
+        return ResponseEntity.ok()
+                .headers(headers)
+                .contentType(MediaType.parseMediaType("application/vnd.ms-excel"))
+                .body(new InputStreamResource(in));
     }
 }
