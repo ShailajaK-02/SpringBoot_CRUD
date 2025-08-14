@@ -3,6 +3,8 @@ package com.company.service;
 import com.company.entity.Developer;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.List;
 
 public interface DeveloperService {
@@ -36,5 +38,8 @@ public interface DeveloperService {
 
     //save  Excel file data
     String saveDeveloperFromExcel(MultipartFile file);
+
+    //Export data from database and add in excel
+    ByteArrayInputStream exportDevelopersToExcel() throws IOException;
 
 }
