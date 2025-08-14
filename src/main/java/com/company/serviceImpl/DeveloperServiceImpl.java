@@ -1,6 +1,7 @@
 package com.company.serviceImpl;
 
 import com.company.entity.Developer;
+import com.company.helper.AddDataInExcel;
 import com.company.helper.ExcelDataRead;
 import com.company.helper.GenerateDeveloperId;
 import com.company.repository.DeveloperRepository;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -124,5 +126,15 @@ public class DeveloperServiceImpl implements DeveloperService {
         catch (IOException e){
             throw new RuntimeException("Failed to store Excel data: " + e.getMessage());
         }
+    }
+
+    @Override
+    public ByteArrayInputStream exportDevelopersToExcel() throws IOException {
+
+        //extract all developers and add it
+
+        List<Developer> developers = developerRepository.findAll();
+        return AddDataInExcel.developersToExcel(developers);
+
     }
 }
