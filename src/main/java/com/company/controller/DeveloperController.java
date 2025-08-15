@@ -1,6 +1,7 @@
 package com.company.controller;
 
 import com.company.entity.Developer;
+import com.company.helper.ExcelDataRead;
 import com.company.helper.GenerateDeveloperId;
 import com.company.service.DeveloperService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -30,14 +31,21 @@ public class DeveloperController {
     @PostMapping("/add")
     public ResponseEntity<String> add(@RequestBody Developer developer){
          System.err.println(developer);
+         if(developer==null){
+             return ResponseEntity.badRequest().body("Developer data is missing");
+         }
          String msg = developerService.saveDeveloper(developer);
-        return new ResponseEntity<>(msg, HttpStatus.CREATED);
+         return new ResponseEntity<>(msg, HttpStatus.CREATED);
     }
 
     //get all data
     @GetMapping("/getAllData")
     public  ResponseEntity<List<Developer>> getAlldata(){
         List<Developer> developerList = developerService.getAllDev();
+
+        if (developerList.isEmpty()){
+            return ResponseEntity.noContent().build();
+        }
         return new ResponseEntity<>(developerList, HttpStatus.OK);
     }
 
@@ -45,20 +53,30 @@ public class DeveloperController {
     @GetMapping("/getById/{id}")
     public ResponseEntity<Developer> getById(@PathVariable("id") int id){
     Developer developer = developerService.getDeveloperById(id);
+
+    if(developer == null){
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+    }
     return new ResponseEntity<>(developer, HttpStatus.OK);
     }
 
     //delete by id
     @DeleteMapping("/deleteById/{id}")
     public  ResponseEntity<String> deleteById(@PathVariable("id") int id){
-        String msg = developerService.deleteDev(id);
-        return new ResponseEntity<>(msg, HttpStatus.OK);
+       boolean deleted = Boolean.parseBoolean(developerService.deleteDev(id));
+       if(!deleted){
+           return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Developer not found");
+       }
+        return ResponseEntity.ok("Deleted successfully");
     }
 
     //update data by id
     @PutMapping("/updateDev/{id}")
     public ResponseEntity<Developer> updateDev(@PathVariable("id") int id, @RequestBody Developer developer){
         Developer updatedDev = developerService.updateDev(id,developer);
+        if(updatedDev == null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
         return new ResponseEntity<>(updatedDev,HttpStatus.OK);
     }
 
@@ -99,7 +117,8 @@ public class DeveloperController {
     //Api for uploading excel file and saving it in database
     @PostMapping(value = "/uploadExcel", consumes = "multipart/form-data")
     public ResponseEntity<String>  uploadExcelFile(@RequestParam("file")MultipartFile file){
-        if (file.isEmpty()){
+
+        if (file.isEmpty()) {
             return ResponseEntity.badRequest().body("Please upload a Excel file!");
         }
         else {
@@ -108,14 +127,26 @@ public class DeveloperController {
         }
     }
 
-    //API to download excel file added
+    // API to download password-protected excel file
     @GetMapping("/downloadExcel")
-    public ResponseEntity<InputStreamResource> downloadFile() throws IOException{
+    public ResponseEntity<InputStreamResource> downloadFile() throws IOException {
 
-       ByteArrayInputStream in  = developerService.exportDevelopersToExcel();
+        List<Developer> developerList = developerService.getAllDev();
+        if (developerList.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NO_CONTENT)
+                    .header("Message", "No content in Excel file").build();
+        }
 
-       HttpHeaders headers = new HttpHeaders();
-       headers.add("Content-Disposition","attachment;filename=DeveloperData.xlsx");
+        // Pass password to service method
+        String password = "12345"; // you can make this dynamic
+        ByteArrayInputStream in = developerService.exportDevelopersToExcel(password);
+
+        if (in == null || in.available() == 0) {
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        }
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", "attachment;filename=DeveloperData.xlsx");
 
         return ResponseEntity.ok()
                 .headers(headers)
