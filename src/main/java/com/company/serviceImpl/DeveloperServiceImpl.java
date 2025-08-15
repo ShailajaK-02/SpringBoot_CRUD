@@ -6,12 +6,19 @@ import com.company.helper.ExcelDataRead;
 import com.company.helper.GenerateDeveloperId;
 import com.company.repository.DeveloperRepository;
 import com.company.service.DeveloperService;
+import org.apache.poi.openxml4j.opc.OPCPackage;
+import org.apache.poi.poifs.crypt.EncryptionInfo;
+import org.apache.poi.poifs.crypt.EncryptionMode;
+import org.apache.poi.poifs.crypt.Encryptor;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -130,12 +137,28 @@ public class DeveloperServiceImpl implements DeveloperService {
 
     //exportdevtoexcel added
     @Override
-    public ByteArrayInputStream exportDevelopersToExcel() throws IOException {
-
-        //extract all developers and add it
-
+    public ByteArrayInputStream exportDevelopersToExcel(String password) throws IOException {
         List<Developer> developers = developerRepository.findAll();
-        return AddDataInExcel.developersToExcel(developers);
 
+        // Step 1: Create normal Excel file
+        ByteArrayInputStream normalExcel = AddDataInExcel.developersToExcel(developers);
+
+        // Step 2: Encrypt with password
+        POIFSFileSystem fs = new POIFSFileSystem();
+        EncryptionInfo info = new EncryptionInfo(EncryptionMode.agile);
+        Encryptor encryptor = info.getEncryptor();
+        encryptor.confirmPassword("yourPassword123"); // set password here
+
+        try (OPCPackage opc = OPCPackage.open(normalExcel);
+             OutputStream os = encryptor.getDataStream(fs)) {
+            opc.save(os);
+        } catch (Exception e) {
+            throw new IOException("Error encrypting Excel file", e);
+        }
+
+        // Step 3: Return encrypted file as ByteArrayInputStream
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        fs.writeFilesystem(bos);
+        return new ByteArrayInputStream(bos.toByteArray());
     }
 }
