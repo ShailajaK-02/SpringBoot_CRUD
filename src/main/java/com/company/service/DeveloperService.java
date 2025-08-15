@@ -40,6 +40,6 @@ public interface DeveloperService {
     String saveDeveloperFromExcel(MultipartFile file);
 
     //Export data from database and add in excel
-    ByteArrayInputStream exportDevelopersToExcel() throws IOException;
+    ByteArrayInputStream exportDevelopersToExcel(String password) throws IOException;
 
 }
