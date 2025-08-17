@@ -9,5 +9,6 @@ public interface AdminService {
     //add admin
     String saveAdmin(List<Admin> admins);
 
-
+    //get all data
+    List<Admin> getallAdminData();
 }
