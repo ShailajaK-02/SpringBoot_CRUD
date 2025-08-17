@@ -1,19 +1,13 @@
 package com.company.controller;
 
 import com.company.entity.Developer;
-import com.company.helper.ExcelDataRead;
-import com.company.helper.GenerateDeveloperId;
+import com.company.service.AdminService;
 import com.company.service.DeveloperService;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.function.ServerRequest;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -128,8 +122,8 @@ public class DeveloperController {
     }
 
     // API to download password-protected excel file
-    @GetMapping("/downloadExcel")
-    public ResponseEntity<InputStreamResource> downloadFile() throws IOException {
+    @GetMapping("/downloadExcel/{adminid}")
+    public ResponseEntity<?> downloadFile(@PathVariable("adminid") int adminid) throws IOException {
 
         List<Developer> developerList = developerService.getAllDev();
         if (developerList.isEmpty()) {
@@ -138,8 +132,8 @@ public class DeveloperController {
         }
 
         // Pass password to service method
-        String password = "12345"; // you can make this dynamic
-        ByteArrayInputStream in = developerService.exportDevelopersToExcel(password);
+        String password = "dev123"; // you can make this dynamic
+        ByteArrayInputStream in = developerService.exportDevelopersToExcel(adminid,password);
 
         if (in == null || in.available() == 0) {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
