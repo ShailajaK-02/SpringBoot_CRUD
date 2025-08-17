@@ -11,4 +11,7 @@ public interface AdminService {
 
     //get all data
     List<Admin> getallAdminData();
+
+    //delete admin
+    String deleteAdmin(int id);
 }
