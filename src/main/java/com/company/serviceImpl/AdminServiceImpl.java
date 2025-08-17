@@ -20,4 +20,10 @@ public class AdminServiceImpl implements AdminService {
         List<Admin> adminList = repository.saveAll(admins);
         return "List saved";
     }
+
+    @Override
+    public List<Admin> getallAdminData() {
+        List<Admin> adminList = repository.findAll();
+        return adminList;
+    }
 }
