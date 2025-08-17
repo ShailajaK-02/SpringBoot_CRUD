@@ -5,10 +5,7 @@ import com.company.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,6 +22,13 @@ public class AdminController {
     public ResponseEntity<String> addAdmin(@RequestBody List<Admin> admins){
         adminService.saveAdmin(admins);
         return new ResponseEntity<>("Admin added", HttpStatus.OK);
+    }
+
+    //get all admin
+    @GetMapping("/getAllAdmin")
+    public ResponseEntity<List<Admin>> getallAdmin(){
+        List<Admin> adminList = adminService.getallAdminData();
+        return new ResponseEntity<>(adminList,HttpStatus.OK);
     }
 
 }
