@@ -1,9 +1,11 @@
 package com.company.serviceImpl;
 
+import com.company.entity.Admin;
 import com.company.entity.Developer;
 import com.company.helper.AddDataInExcel;
 import com.company.helper.ExcelDataRead;
 import com.company.helper.GenerateDeveloperId;
+import com.company.repository.AdminRepository;
 import com.company.repository.DeveloperRepository;
 import com.company.service.DeveloperService;
 import org.apache.poi.openxml4j.opc.OPCPackage;
@@ -20,6 +22,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -27,6 +30,9 @@ public class DeveloperServiceImpl implements DeveloperService {
 
     @Autowired
     private DeveloperRepository developerRepository;
+
+    @Autowired
+    private AdminRepository adminRepository;
 
     //save devloper
     @Override
@@ -137,17 +143,24 @@ public class DeveloperServiceImpl implements DeveloperService {
 
     //exportdevtoexcel added
     @Override
-    public ByteArrayInputStream exportDevelopersToExcel(String password) throws IOException {
+    public ByteArrayInputStream exportDevelopersToExcel(int adminid, String password) throws IOException {
+
+        //validate the admin if admin exist then only download otherwise dont
+        Optional<Admin> adminOpt = adminRepository.findById(adminid);
+        if (adminOpt.isEmpty()) {
+            return null;
+        }
+
         List<Developer> developers = developerRepository.findAll();
 
         // Step 1: Create normal Excel file
-        ByteArrayInputStream normalExcel = AddDataInExcel.developersToExcel(developers);
+        ByteArrayInputStream normalExcel = AddDataInExcel.developersToExcel(developers,password);
 
         // Step 2: Encrypt with password
         POIFSFileSystem fs = new POIFSFileSystem();
         EncryptionInfo info = new EncryptionInfo(EncryptionMode.agile);
         Encryptor encryptor = info.getEncryptor();
-        encryptor.confirmPassword("yourPassword123"); // set password here
+        encryptor.confirmPassword("dev123"); // set password here
 
         try (OPCPackage opc = OPCPackage.open(normalExcel);
              OutputStream os = encryptor.getDataStream(fs)) {
