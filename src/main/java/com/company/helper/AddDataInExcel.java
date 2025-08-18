@@ -14,7 +14,7 @@ import java.util.List;
 public class AddDataInExcel {
 
    //method to get data from db
-    public static ByteArrayInputStream developersToExcel(List<Developer> developers, String password) throws IOException {
+    public static ByteArrayInputStream developersToExcel(List<Developer> developers) throws IOException {
         String[] columns = {"ID", "First name", "Last name", "Age", "City", "YearofBirth", "Dev id", "Gender", "Salary"};
 
         try {
