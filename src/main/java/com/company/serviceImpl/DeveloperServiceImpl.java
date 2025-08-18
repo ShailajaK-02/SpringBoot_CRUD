@@ -143,24 +143,30 @@ public class DeveloperServiceImpl implements DeveloperService {
 
     //exportdevtoexcel added
     @Override
-    public ByteArrayInputStream exportDevelopersToExcel(int adminid, String password) throws IOException {
+    public ByteArrayInputStream exportDevelopersToExcel(int adminid) throws IOException {
 
         //validate the admin if admin exist then only download otherwise dont
         Optional<Admin> adminOpt = adminRepository.findById(adminid);
         if (adminOpt.isEmpty()) {
             return null;
         }
-
+        Admin admin = adminOpt.get(); //get admin object
         List<Developer> developers = developerRepository.findAll();
 
         // Step 1: Create normal Excel file
-        ByteArrayInputStream normalExcel = AddDataInExcel.developersToExcel(developers,password);
+        ByteArrayInputStream normalExcel = AddDataInExcel.developersToExcel(developers);
+
+        //Dynamaic password for admin
+
+        int digit = admin.getAdminid() % 100;
+
+        String dynamicpassword = admin.getLname().substring(0,1) + admin.getFname() + digit ; //kshailaja05
 
         // Step 2: Encrypt with password
         POIFSFileSystem fs = new POIFSFileSystem();
         EncryptionInfo info = new EncryptionInfo(EncryptionMode.agile);
         Encryptor encryptor = info.getEncryptor();
-        encryptor.confirmPassword("dev123"); // set password here
+        encryptor.confirmPassword(dynamicpassword); // set password here
 
         try (OPCPackage opc = OPCPackage.open(normalExcel);
              OutputStream os = encryptor.getDataStream(fs)) {
