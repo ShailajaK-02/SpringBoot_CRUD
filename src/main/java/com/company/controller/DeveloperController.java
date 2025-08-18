@@ -131,9 +131,7 @@ public class DeveloperController {
                     .header("Message", "No content in Excel file").build();
         }
 
-        // Pass password to service method
-        String password = "dev123"; // you can make this dynamic
-        ByteArrayInputStream in = developerService.exportDevelopersToExcel(adminid,password);
+        ByteArrayInputStream in = developerService.exportDevelopersToExcel(adminid);
 
         if (in == null || in.available() == 0) {
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
