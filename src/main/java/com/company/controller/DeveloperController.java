@@ -3,6 +3,7 @@ package com.company.controller;
 import com.company.entity.Developer;
 import com.company.service.AdminService;
 import com.company.service.DeveloperService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.*;
@@ -14,6 +15,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+//For logger
+@Slf4j
 @RestController
 @RequestMapping("/developer")
 public class DeveloperController {
@@ -24,55 +27,81 @@ public class DeveloperController {
     //add single data
     @PostMapping("/add")
     public ResponseEntity<String> add(@RequestBody Developer developer){
-         System.err.println(developer);
+//         System.err.println(developer);
+         log.info("Received request to add Developer :{}" , developer);
+
          if(developer==null){
              return ResponseEntity.badRequest().body("Developer data is missing");
          }
          String msg = developerService.saveDeveloper(developer);
+         log.info("Add developer completed : {}", msg);
          return new ResponseEntity<>(msg, HttpStatus.CREATED);
     }
 
     //get all data
     @GetMapping("/getAllData")
     public  ResponseEntity<List<Developer>> getAlldata(){
+        log.info("Getting all developer data ");
         List<Developer> developerList = developerService.getAllDev();
 
         if (developerList.isEmpty()){
+            log.warn("No developer data found");
             return ResponseEntity.noContent().build();
         }
+        log.info("Fetched {} developers", developerList.size());
         return new ResponseEntity<>(developerList, HttpStatus.OK);
     }
 
     //get by id
     @GetMapping("/getById/{id}")
-    public ResponseEntity<Developer> getById(@PathVariable("id") int id){
-    Developer developer = developerService.getDeveloperById(id);
+    public ResponseEntity<Developer> getById(@PathVariable("id") int id) {
+        log.info("Fetching developer with ID: {}", id);
 
-    if(developer == null){
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-    }
-    return new ResponseEntity<>(developer, HttpStatus.OK);
+        Developer developer = developerService.getDeveloperById(id);
+
+        if (developer == null) {
+            log.warn("Developer with ID {} not found", id);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
+        log.info("Developer with ID {} fetched successfully", id);
+        return new ResponseEntity<>(developer, HttpStatus.OK);
     }
 
-    //delete by id
+    //delete
     @DeleteMapping("/deleteById/{id}")
-    public  ResponseEntity<String> deleteById(@PathVariable("id") int id){
-       boolean deleted = Boolean.parseBoolean(developerService.deleteDev(id));
-       if(!deleted){
-           return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Developer not found");
-       }
+    public ResponseEntity<String> deleteById(@PathVariable("id") int id) {
+        log.info("Attempting to delete developer with ID: {}", id);
+
+        boolean deleted = developerService.deleteDev(id); // directly boolean
+
+        if (!deleted) {
+            log.warn("Delete failed - Developer with ID {} not found", id);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Developer not found");
+        }
+
+        log.info("Developer with ID {} deleted successfully", id);
         return ResponseEntity.ok("Deleted successfully");
     }
 
+
+
     //update data by id
     @PutMapping("/updateDev/{id}")
-    public ResponseEntity<Developer> updateDev(@PathVariable("id") int id, @RequestBody Developer developer){
-        Developer updatedDev = developerService.updateDev(id,developer);
-        if(updatedDev == null){
+    public ResponseEntity<Developer> updateDev(@PathVariable("id") int id, @RequestBody Developer developer) {
+        log.info("Updating developer with ID: {}", id);
+
+        Developer updatedDev = developerService.updateDev(id, developer);
+
+        if (updatedDev == null) {
+            log.warn("Update failed - Developer with ID {} not found", id);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-        return new ResponseEntity<>(updatedDev,HttpStatus.OK);
+
+        log.info("Developer with ID {} updated successfully", id);
+        return new ResponseEntity<>(updatedDev, HttpStatus.OK);
     }
+
 
     //api to save list of dev
     @PostMapping("/addListData")

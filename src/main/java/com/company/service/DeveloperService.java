@@ -19,7 +19,7 @@ public interface DeveloperService {
     Developer getDeveloperById(int id);
 
     //delete dev
-    String deleteDev(int id);
+    boolean deleteDev(int id);
 
     //update dev
     Developer updateDev(int id, Developer newData);

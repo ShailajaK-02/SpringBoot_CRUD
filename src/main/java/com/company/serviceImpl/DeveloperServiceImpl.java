@@ -8,6 +8,7 @@ import com.company.helper.GenerateDeveloperId;
 import com.company.repository.AdminRepository;
 import com.company.repository.DeveloperRepository;
 import com.company.service.DeveloperService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.poifs.crypt.EncryptionInfo;
 import org.apache.poi.poifs.crypt.EncryptionMode;
@@ -25,6 +26,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Slf4j   //for logger
 @Service
 public class DeveloperServiceImpl implements DeveloperService {
 
@@ -42,8 +44,13 @@ public class DeveloperServiceImpl implements DeveloperService {
         String devId = GenerateDeveloperId.generateId(developer);
 
         developer.setDevloperId(devId);
+        log.debug("Saving developer :{}",developer);
+
         Developer saveDeveloper = developerRepository.save(developer);
-        return " Hii "+ developer.getFname()+ "Your developer Id is : " +  developer.getDevloperId();
+
+        log.info("Developer saved with fname={} lname={}", developer.getFname(), developer.getLname());
+
+        return " Hii "+ developer.getFname()+ "Your developer Id is : " +  developer.getDevloperId();//on postman
     }
 
     //get all data
@@ -61,9 +68,13 @@ public class DeveloperServiceImpl implements DeveloperService {
     }
 
     @Override
-    public String deleteDev(int id) {
-        developerRepository.deleteById(id);
-        return  "Developer deleted";
+    public boolean deleteDev(int id) {
+        Optional<Developer> developer = developerRepository.findById(id);
+        if (developer.isPresent()) {
+            developerRepository.deleteById(id);
+            return true;  // return boolean
+        }
+        return false;
     }
 
     @Override
