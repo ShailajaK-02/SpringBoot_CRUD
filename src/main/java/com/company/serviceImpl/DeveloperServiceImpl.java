@@ -64,6 +64,7 @@ public class DeveloperServiceImpl implements DeveloperService {
     //get by id
     @Override
     public Developer getDeveloperById(int id) {
+        //custom exception
         Developer developer =  developerRepository.findById(id).orElseThrow(() -> new DeveloperNotFoundException("Developer with id not found " + id));
 
         return developer;
