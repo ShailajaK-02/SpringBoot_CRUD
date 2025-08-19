@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-//For logger
+//For logger this annotation is use
 @Slf4j
 @RestController
 @RequestMapping("/developer")
