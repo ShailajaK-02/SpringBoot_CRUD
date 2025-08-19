@@ -2,6 +2,7 @@ package com.company.serviceImpl;
 
 import com.company.entity.Admin;
 import com.company.entity.Developer;
+import com.company.exception.DeveloperNotFoundException;
 import com.company.helper.AddDataInExcel;
 import com.company.helper.ExcelDataRead;
 import com.company.helper.GenerateDeveloperId;
@@ -63,7 +64,8 @@ public class DeveloperServiceImpl implements DeveloperService {
     //get by id
     @Override
     public Developer getDeveloperById(int id) {
-        Developer developer =  developerRepository.findById(id).orElseThrow(() -> new NullPointerException("Developer with id not found" +id));
+        Developer developer =  developerRepository.findById(id).orElseThrow(() -> new DeveloperNotFoundException("Developer with id not found " + id));
+
         return developer;
     }
 
