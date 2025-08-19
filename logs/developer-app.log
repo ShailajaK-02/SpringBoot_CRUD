@@ -1,22 +1,22 @@
-2025-08-18T20:30:22.834+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Starting MyFirstCrudOperationApplication using Java 17.0.12 with PID 12888 (C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation\target\classes started by Shailaja kshirsagar in C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation)
-2025-08-18T20:30:22.850+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-08-18T20:30:24.019+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-18T20:30:24.121+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 2 JPA repository interfaces.
-2025-08-18T20:30:24.810+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-08-18T20:30:24.822+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-08-18T20:30:24.822+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-18T20:30:24.911+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-08-18T20:30:24.911+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1979 ms
-2025-08-18T20:30:25.186+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-18T20:30:25.264+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-18T20:30:25.303+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-08-18T20:30:25.716+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-18T20:30:25.770+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-18T20:30:26.177+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6df2a206
-2025-08-18T20:30:26.181+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-08-18T20:30:26.239+05:30  WARN 12888 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-18T20:30:26.239+05:30  WARN 12888 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-18T20:30:26.271+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-08-19T20:11:53.422+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Starting MyFirstCrudOperationApplication using Java 17.0.12 with PID 4816 (C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation\target\classes started by Shailaja kshirsagar in C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation)
+2025-08-19T20:11:53.422+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-08-19T20:11:54.806+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-19T20:11:54.931+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 2 JPA repository interfaces.
+2025-08-19T20:11:55.920+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-19T20:11:55.951+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-19T20:11:55.952+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-19T20:11:56.064+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-19T20:11:56.064+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2567 ms
+2025-08-19T20:11:56.387+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-19T20:11:56.530+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-19T20:11:56.611+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-19T20:11:57.150+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-19T20:11:57.209+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-19T20:11:58.008+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d96d434
+2025-08-19T20:11:58.015+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-19T20:11:58.124+05:30  WARN 4816 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-19T20:11:58.128+05:30  WARN 4816 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-19T20:11:58.182+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -24,43 +24,98 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-18T20:30:27.439+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-18T20:30:27.519+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-18T20:30:28.071+05:30  WARN 12888 --- [MyFirstCRUDOperation] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-18T20:30:28.137+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-08-18T20:30:28.783+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-08-18T20:30:28.794+05:30  INFO 12888 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Started MyFirstCrudOperationApplication in 6.708 seconds (process running for 7.297)
-2025-08-18T20:30:36.084+05:30  INFO 12888 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-18T20:30:36.084+05:30  INFO 12888 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-08-18T20:30:36.086+05:30  INFO 12888 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-08-18T20:30:36.942+05:30  INFO 12888 --- [MyFirstCRUDOperation] [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 397 ms
-2025-08-18T20:31:19.598+05:30  INFO 12888 --- [MyFirstCRUDOperation] [http-nio-8080-exec-8] c.c.controller.DeveloperController       : Received request to add Developer :Developer(id=0, fname=alove, lname=shende, age=20, city=mumbai, salary=250000, gender=male, devloperId=string, yob=2005)
-2025-08-18T20:31:19.820+05:30  INFO 12888 --- [MyFirstCRUDOperation] [http-nio-8080-exec-8] c.c.serviceImpl.DeveloperServiceImpl     : Developer saved with fname=alove lname=shende
-2025-08-18T20:31:19.821+05:30  INFO 12888 --- [MyFirstCRUDOperation] [http-nio-8080-exec-8] c.c.controller.DeveloperController       : Add developer completed :  Hii aloveYour developer Id is : salove05
-2025-08-18T20:48:33.933+05:30  INFO 12888 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-18T20:48:33.980+05:30  INFO 12888 --- [MyFirstCRUDOperation] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-08-18T20:48:34.005+05:30  INFO 12888 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-18T20:48:34.015+05:30  INFO 12888 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-08-18T20:48:34.036+05:30  INFO 12888 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-08-18T20:51:41.028+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Starting MyFirstCrudOperationApplication using Java 17.0.12 with PID 15092 (C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation\target\classes started by Shailaja kshirsagar in C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation)
-2025-08-18T20:51:41.032+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-08-18T20:51:42.466+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-18T20:51:42.565+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
-2025-08-18T20:51:43.375+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-08-18T20:51:43.391+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-08-18T20:51:43.391+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-18T20:51:43.486+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-08-18T20:51:43.486+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2368 ms
-2025-08-18T20:51:43.831+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-18T20:51:43.926+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-18T20:51:43.974+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-08-18T20:51:44.435+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-18T20:51:44.487+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-18T20:51:45.040+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@727453a3
-2025-08-18T20:51:45.043+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-08-18T20:51:45.100+05:30  WARN 15092 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-18T20:51:45.100+05:30  WARN 15092 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-18T20:51:45.137+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-08-19T20:11:59.140+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-19T20:11:59.257+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19T20:11:59.614+05:30  WARN 4816 --- [MyFirstCRUDOperation] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-19T20:11:59.677+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-08-19T20:12:00.348+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-19T20:12:00.362+05:30  INFO 4816 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Started MyFirstCrudOperationApplication in 7.635 seconds (process running for 8.263)
+2025-08-19T20:13:09.998+05:30  INFO 4816 --- [MyFirstCRUDOperation] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-19T20:13:09.998+05:30  INFO 4816 --- [MyFirstCRUDOperation] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-19T20:13:09.998+05:30  INFO 4816 --- [MyFirstCRUDOperation] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-08-19T20:13:10.083+05:30  INFO 4816 --- [MyFirstCRUDOperation] [http-nio-8080-exec-2] c.c.controller.DeveloperController       : Fetching developer with ID: 101
+2025-08-19T20:13:10.157+05:30 ERROR 4816 --- [MyFirstCRUDOperation] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Developer with id not found101] with root cause
+
+java.lang.NullPointerException: Developer with id not found101
+	at com.company.serviceImpl.DeveloperServiceImpl.lambda$getDeveloperById$0(DeveloperServiceImpl.java:66) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.company.serviceImpl.DeveloperServiceImpl.getDeveloperById(DeveloperServiceImpl.java:66) ~[classes/:na]
+	at com.company.controller.DeveloperController.getById(DeveloperController.java:60) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.43.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.43.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-08-19T20:16:27.800+05:30  INFO 4816 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-19T20:16:27.849+05:30  INFO 4816 --- [MyFirstCRUDOperation] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-19T20:16:27.857+05:30  INFO 4816 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19T20:16:27.861+05:30  INFO 4816 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-19T20:16:27.872+05:30  INFO 4816 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-19T20:16:31.850+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Starting MyFirstCrudOperationApplication using Java 17.0.12 with PID 7868 (C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation\target\classes started by Shailaja kshirsagar in C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation)
+2025-08-19T20:16:31.859+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-08-19T20:16:32.751+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-19T20:16:32.834+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2025-08-19T20:16:33.470+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-19T20:16:33.475+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-19T20:16:33.475+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-19T20:16:33.559+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-19T20:16:33.559+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1633 ms
+2025-08-19T20:16:33.834+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-19T20:16:33.901+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-19T20:16:33.934+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-19T20:16:34.261+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-19T20:16:34.320+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-19T20:16:34.694+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@598778cc
+2025-08-19T20:16:34.711+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-19T20:16:34.773+05:30  WARN 7868 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-19T20:16:34.773+05:30  WARN 7868 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-19T20:16:34.791+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -68,43 +123,98 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-18T20:51:46.303+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-18T20:51:46.398+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-18T20:51:46.887+05:30  WARN 15092 --- [MyFirstCRUDOperation] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-18T20:51:46.948+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-08-18T20:51:47.571+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-08-18T20:51:47.590+05:30  INFO 15092 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Started MyFirstCrudOperationApplication in 7.535 seconds (process running for 8.04)
-2025-08-18T20:51:55.211+05:30  INFO 15092 --- [MyFirstCRUDOperation] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-18T20:51:55.217+05:30  INFO 15092 --- [MyFirstCRUDOperation] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-08-18T20:51:55.219+05:30  INFO 15092 --- [MyFirstCRUDOperation] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-08-18T20:51:57.930+05:30  INFO 15092 --- [MyFirstCRUDOperation] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 2163 ms
-2025-08-18T20:52:33.117+05:30  INFO 15092 --- [MyFirstCRUDOperation] [http-nio-8080-exec-7] c.c.controller.DeveloperController       : Received request to add Developer :Developer(id=0, fname=Hiten, lname=kamble, age=20, city=pune, salary=30000, gender=male, devloperId=string, yob=2005)
-2025-08-18T20:52:33.327+05:30  INFO 15092 --- [MyFirstCRUDOperation] [http-nio-8080-exec-7] c.c.serviceImpl.DeveloperServiceImpl     : Developer saved with fname=Hiten lname=kamble
-2025-08-18T20:52:33.328+05:30  INFO 15092 --- [MyFirstCRUDOperation] [http-nio-8080-exec-7] c.c.controller.DeveloperController       : Add developer completed :  Hii HitenYour developer Id is : kHiten05
-2025-08-18T20:59:52.482+05:30  INFO 15092 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-18T20:59:52.549+05:30  INFO 15092 --- [MyFirstCRUDOperation] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-08-18T20:59:52.554+05:30  INFO 15092 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-18T20:59:52.558+05:30  INFO 15092 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-08-18T20:59:52.575+05:30  INFO 15092 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-08-18T20:59:57.886+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Starting MyFirstCrudOperationApplication using Java 17.0.12 with PID 12180 (C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation\target\classes started by Shailaja kshirsagar in C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation)
-2025-08-18T20:59:57.886+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-08-18T20:59:59.021+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-18T20:59:59.116+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
-2025-08-18T20:59:59.896+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-08-18T20:59:59.922+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-08-18T20:59:59.922+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-18T21:00:00.057+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-08-18T21:00:00.065+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2092 ms
-2025-08-18T21:00:00.342+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-18T21:00:00.405+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-18T21:00:00.461+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-08-18T21:00:00.907+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-18T21:00:00.952+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-18T21:00:01.410+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f240187
-2025-08-18T21:00:01.414+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-08-18T21:00:01.473+05:30  WARN 12180 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-18T21:00:01.473+05:30  WARN 12180 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-18T21:00:01.506+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-08-19T20:16:35.602+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-19T20:16:35.670+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19T20:16:36.050+05:30  WARN 7868 --- [MyFirstCRUDOperation] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-19T20:16:36.114+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-08-19T20:16:36.621+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-19T20:16:36.636+05:30  INFO 7868 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Started MyFirstCrudOperationApplication in 5.449 seconds (process running for 5.918)
+2025-08-19T20:17:41.124+05:30  INFO 7868 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-19T20:17:41.124+05:30  INFO 7868 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-19T20:17:41.124+05:30  INFO 7868 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-08-19T20:17:41.219+05:30  INFO 7868 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] c.c.controller.DeveloperController       : Fetching developer with ID: 101
+2025-08-19T20:17:41.298+05:30 ERROR 7868 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Developer with id not found101] with root cause
+
+java.lang.NullPointerException: Developer with id not found101
+	at com.company.serviceImpl.DeveloperServiceImpl.lambda$getDeveloperById$0(DeveloperServiceImpl.java:66) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.company.serviceImpl.DeveloperServiceImpl.getDeveloperById(DeveloperServiceImpl.java:66) ~[classes/:na]
+	at com.company.controller.DeveloperController.getById(DeveloperController.java:60) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.43.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.9.jar:6.2.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.43.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.9.jar:6.2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.43.jar:10.1.43]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-08-19T20:18:08.360+05:30  INFO 7868 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-19T20:18:08.398+05:30  INFO 7868 --- [MyFirstCRUDOperation] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-19T20:18:08.398+05:30  INFO 7868 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19T20:18:08.398+05:30  INFO 7868 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-19T20:18:08.414+05:30  INFO 7868 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-19T20:22:22.456+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Starting MyFirstCrudOperationApplication using Java 17.0.12 with PID 3300 (C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation\target\classes started by Shailaja kshirsagar in C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation)
+2025-08-19T20:22:22.471+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-08-19T20:22:23.381+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-19T20:22:23.460+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2025-08-19T20:22:24.014+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-19T20:22:24.030+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-19T20:22:24.030+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-19T20:22:24.094+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-19T20:22:24.094+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1549 ms
+2025-08-19T20:22:24.331+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-19T20:22:24.426+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-19T20:22:24.458+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-19T20:22:24.757+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-19T20:22:24.790+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-19T20:22:25.171+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26f5e45d
+2025-08-19T20:22:25.171+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-19T20:22:25.219+05:30  WARN 3300 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-19T20:22:25.219+05:30  WARN 3300 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-08-19T20:22:25.251+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -112,64 +222,18 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-18T21:00:02.626+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-18T21:00:02.714+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-18T21:00:03.294+05:30  WARN 12180 --- [MyFirstCRUDOperation] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-18T21:00:03.389+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-08-18T21:00:04.056+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-08-18T21:00:04.075+05:30  INFO 12180 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Started MyFirstCrudOperationApplication in 6.937 seconds (process running for 7.438)
-2025-08-18T21:00:06.514+05:30  INFO 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-18T21:00:06.516+05:30  INFO 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-08-18T21:00:06.518+05:30  INFO 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-08-18T21:00:07.414+05:30  INFO 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 402 ms
-2025-08-18T21:00:26.199+05:30  INFO 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-5] c.c.controller.DeveloperController       : Attempting to delete developer with ID: 8
-2025-08-18T21:00:26.526+05:30  WARN 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-5] c.c.controller.DeveloperController       : Delete failed - Developer with ID 8 not found
-2025-08-18T21:00:44.570+05:30  INFO 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-6] c.c.controller.DeveloperController       : Attempting to delete developer with ID: 2
-2025-08-18T21:00:44.598+05:30  WARN 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-6] c.c.controller.DeveloperController       : Delete failed - Developer with ID 2 not found
-2025-08-18T21:01:36.245+05:30  INFO 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-9] c.c.controller.DeveloperController       : Attempting to delete developer with ID: 4
-2025-08-18T21:01:36.279+05:30  WARN 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-9] c.c.controller.DeveloperController       : Delete failed - Developer with ID 4 not found
-2025-08-18T21:01:50.171+05:30  INFO 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-10] c.c.controller.DeveloperController       : Attempting to delete developer with ID: 4
-2025-08-18T21:01:50.187+05:30  WARN 12180 --- [MyFirstCRUDOperation] [http-nio-8080-exec-10] c.c.controller.DeveloperController       : Delete failed - Developer with ID 4 not found
-2025-08-18T21:04:30.423+05:30  INFO 12180 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-18T21:04:30.550+05:30  INFO 12180 --- [MyFirstCRUDOperation] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-08-18T21:04:30.557+05:30  INFO 12180 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-18T21:04:30.564+05:30  INFO 12180 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-08-18T21:04:30.582+05:30  INFO 12180 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-08-18T21:04:35.804+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Starting MyFirstCrudOperationApplication using Java 17.0.12 with PID 14688 (C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation\target\classes started by Shailaja kshirsagar in C:\Users\asus\OneDrive\Desktop\SpringBoot\MyFirstCRUDOperation\MyFirstCRUDOperation)
-2025-08-18T21:04:35.811+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-08-18T21:04:37.009+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-18T21:04:37.122+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
-2025-08-18T21:04:37.908+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-08-18T21:04:37.924+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-08-18T21:04:37.926+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
-2025-08-18T21:04:38.036+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-08-18T21:04:38.036+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2150 ms
-2025-08-18T21:04:38.362+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-18T21:04:38.459+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
-2025-08-18T21:04:38.515+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-08-18T21:04:38.976+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-18T21:04:39.033+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-18T21:04:39.693+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d3ad37a
-2025-08-18T21:04:39.697+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-08-18T21:04:39.766+05:30  WARN 14688 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-18T21:04:39.766+05:30  WARN 14688 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-08-18T21:04:39.804+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-08-18T21:04:41.092+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-18T21:04:41.166+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-18T21:04:41.669+05:30  WARN 14688 --- [MyFirstCRUDOperation] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-18T21:04:41.738+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-08-18T21:04:42.360+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-08-18T21:04:42.374+05:30  INFO 14688 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Started MyFirstCrudOperationApplication in 7.327 seconds (process running for 7.839)
-2025-08-18T21:04:58.429+05:30  INFO 14688 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-18T21:04:58.431+05:30  INFO 14688 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-08-18T21:04:58.433+05:30  INFO 14688 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-08-18T21:04:59.244+05:30  INFO 14688 --- [MyFirstCRUDOperation] [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 445 ms
-2025-08-18T21:05:05.564+05:30  INFO 14688 --- [MyFirstCRUDOperation] [http-nio-8080-exec-8] c.c.controller.DeveloperController       : Attempting to delete developer with ID: 44
-2025-08-18T21:05:05.700+05:30  INFO 14688 --- [MyFirstCRUDOperation] [http-nio-8080-exec-8] c.c.controller.DeveloperController       : Developer with ID 44 deleted successfully
+2025-08-19T20:22:26.098+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-19T20:22:26.129+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19T20:22:26.479+05:30  WARN 3300 --- [MyFirstCRUDOperation] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-19T20:22:26.533+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-08-19T20:22:26.988+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-19T20:22:27.004+05:30  INFO 3300 --- [MyFirstCRUDOperation] [main] c.c.MyFirstCrudOperationApplication      : Started MyFirstCrudOperationApplication in 5.179 seconds (process running for 5.547)
+2025-08-19T20:22:42.818+05:30  INFO 3300 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-19T20:22:42.818+05:30  INFO 3300 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-19T20:22:42.818+05:30  INFO 3300 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-08-19T20:22:42.961+05:30  INFO 3300 --- [MyFirstCRUDOperation] [http-nio-8080-exec-1] c.c.controller.DeveloperController       : Fetching developer with ID: 101
+2025-08-19T20:33:44.670+05:30  INFO 3300 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-19T20:33:44.849+05:30  INFO 3300 --- [MyFirstCRUDOperation] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-19T20:33:44.856+05:30  INFO 3300 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-19T20:33:44.861+05:30  INFO 3300 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-19T20:33:44.890+05:30  INFO 3300 --- [MyFirstCRUDOperation] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
