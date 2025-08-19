@@ -59,10 +59,10 @@ public class DeveloperController {
 
         Developer developer = developerService.getDeveloperById(id);
 
-        if (developer == null) {
-            log.warn("Developer with ID {} not found", id);
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
+//        if (developer == null) {
+//            log.warn("Developer with ID {} not found", id);
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+//        }
 
         log.info("Developer with ID {} fetched successfully", id);
         return new ResponseEntity<>(developer, HttpStatus.OK);
