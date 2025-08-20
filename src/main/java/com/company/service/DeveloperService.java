@@ -42,4 +42,7 @@ public interface DeveloperService {
     //Export data from database and add in excel
     ByteArrayInputStream exportDevelopersToExcel(int adminid) throws IOException;
 
+    //get data by age
+    List<Developer> getByAge(int age);
+
 }
