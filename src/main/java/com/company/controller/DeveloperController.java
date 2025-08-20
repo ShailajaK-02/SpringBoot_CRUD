@@ -4,6 +4,7 @@ import com.company.entity.Developer;
 import com.company.service.AdminService;
 import com.company.service.DeveloperService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.*;
@@ -173,5 +174,12 @@ public class DeveloperController {
                 .headers(headers)
                 .contentType(MediaType.parseMediaType("application/vnd.ms-excel"))
                 .body(new InputStreamResource(in));
+    }
+
+    //Query Filter by age using jpql query
+    @GetMapping("/getByAge/{age}")
+    public ResponseEntity<List<Developer>> getByAge(@PathVariable("age") int age){
+        List<Developer> developers = developerService.getByAge(age);
+        return new ResponseEntity<>(developers, HttpStatus.OK);
     }
 }
