@@ -57,7 +57,7 @@ public class ExcelDataRead {
                 dev.setCity(currentRow.getCell(3).getStringCellValue());
                 dev.setSalary((long) currentRow.getCell(4).getNumericCellValue());
                 dev.setGender(currentRow.getCell(5).getStringCellValue());
-                dev.setYob((int) currentRow.getCell(6).getNumericCellValue());
+                //dev.setYob((int) currentRow.getCell(6).getNumericCellValue());
 
                 list.add(dev);
             }
