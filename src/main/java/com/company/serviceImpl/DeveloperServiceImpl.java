@@ -24,6 +24,9 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -42,6 +45,9 @@ public class DeveloperServiceImpl implements DeveloperService {
     @Override
     public String saveDeveloper(Developer developer) {
 
+        //calculate age of developer
+        int age = Period.between(developer.getDob(), LocalDate.now()).getYears();
+        developer.setAge(age);
         //call method from here
         String devId = GenerateDeveloperId.generateId(developer);
 
@@ -98,6 +104,14 @@ public class DeveloperServiceImpl implements DeveloperService {
 
     @Override
     public String saveListDev(List<Developer> developers) {
+        //calculate age of developer
+        for(Developer developer : developers){
+            int age = Period.between(developer.getDob(), LocalDate.now()).getYears();
+            developer.setAge(age);
+            //generate their dev id
+            String devId = GenerateDeveloperId.generateId(developer);
+            developer.setDevloperId(devId);
+        }
         List<Developer> developerList = developerRepository.saveAll(developers);
         return "List saved";
     }
