@@ -25,10 +25,10 @@ public class SimpleSchedulers {
 //        System.err.println("Today is friday");
 //    }
 
-    // create a schedular to check if developer_id is missing
-    //if it is missing then create again and store it in database
-    //use native query to update field
-
+    // 1 --> create a schedular to check if developer_id is missing
+         //if it is missing then create again and store it in database
+         //use native query to update field
+    //This will update at midnight
     @Scheduled(cron = "0 0 0 * * ?")
     public void checkDevIdMissing(){
         //call findDevmiss id to get list of dev whose id is missing and store it
@@ -41,4 +41,20 @@ public class SimpleSchedulers {
             repository.updateIfDevIdMiss(d.getId(),devId);
         }
     }
+
+       //2 --> create a schedular to update age by 1 if today is DOB of developer & store it in db
+       //use custom JPQL query to update for this we have to use @Transactional annotation ,
+       // and @Modifying annotation .
+       //If we are using or writing JPQL Query then use Entity feild names and if we are using Nativequery-true then db coln name.
+       @Scheduled(cron = "0 0 0 * * ?")
+       public void updateDevAge(){
+            //get dev whose bday is todays date
+            List<Developer> devBdayList = repository.findTodaysBirthdays();
+            for(Developer dev : devBdayList){
+                // age + 1 to update
+                int age = dev.getAge() + 1;
+                dev.setAge(age);
+                repository.updateAgeBYBirthdate(dev.getId() , age);
+            }
+        }
 }
