@@ -1,7 +1,9 @@
 package com.company.helper;
 
 import com.company.entity.Developer;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GenerateDeveloperId {
 
     public static String generateId(Developer developer) {
