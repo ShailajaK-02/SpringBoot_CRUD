@@ -9,7 +9,7 @@ public class GenerateDeveloperId {
     public static String generateId(Developer developer) {
         String fname = developer.getFname();     // "Shailaja"
         String lname = developer.getLname();     // "K"
-        int yob = developer.getYob();            // 1998
+        int yob = developer.getDob().getYear();            // 1998
 
         // Get first character of last name
         char fletter = lname.charAt(0);          // 'K'
