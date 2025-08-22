@@ -8,6 +8,10 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Entity
 //lombok dependecy generate setter,getter,tostring
 @Setter
@@ -25,7 +29,11 @@ public class Developer {
 
     private String lname;
 
+    //ignore age ,because it will calculated by springboot
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private int age;
+
+    private LocalDate dob;
 
     private String city;
 
@@ -33,8 +41,8 @@ public class Developer {
 
     private  String gender;
 
+    //It will be automatically generated so add json
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String devloperId;
-
-    private int yob;
 
 }
