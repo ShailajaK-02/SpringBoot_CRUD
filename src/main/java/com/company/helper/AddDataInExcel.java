@@ -45,7 +45,7 @@ public class AddDataInExcel {
                 row1.createCell(2).setCellValue(dev.getLname());
                 row1.createCell(3).setCellValue(dev.getAge());
                 row1.createCell(4).setCellValue(dev.getCity());
-                row1.createCell(5).setCellValue(dev.getYob());
+                row1.createCell(5).setCellValue(dev.getDob());
                 row1.createCell(6).setCellValue(dev.getDevloperId());
                 row1.createCell(7).setCellValue(dev.getGender());
                 row1.createCell(8).setCellValue(dev.getSalary());
