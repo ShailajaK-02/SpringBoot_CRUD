@@ -1,6 +1,7 @@
 package com.company.service;
 
 import com.company.entity.Developer;
+import jakarta.transaction.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayInputStream;
@@ -44,5 +45,11 @@ public interface DeveloperService {
 
     //get data by age
     List<Developer> getByAge(int age);
+
+    //get dev greater than certain age
+    List<Developer> maxAge(int age);
+
+    //get by name
+    Developer devByName(String fname);
 
 }
