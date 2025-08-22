@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -182,4 +183,19 @@ public class DeveloperController {
         List<Developer> developers = developerService.getByAge(age);
         return new ResponseEntity<>(developers, HttpStatus.OK);
     }
+
+    //write api to get the dev whose age > 25
+    @GetMapping("/devMaxAge/{age}")
+    public ResponseEntity<List<Developer>> maxAge(@PathVariable("age") int age){
+        List<Developer> developers = developerService.maxAge(age);
+        return new ResponseEntity<>(developers, HttpStatus.OK);
+    }
+
+    //api to get by name using native query
+    @GetMapping("/devByName/{fname}")
+    public ResponseEntity<Developer> devByName(@PathVariable("fname") String fname){
+        Developer d = developerService.devByName(fname);
+        return new ResponseEntity<>(d,HttpStatus.OK);
+    }
+
 }
