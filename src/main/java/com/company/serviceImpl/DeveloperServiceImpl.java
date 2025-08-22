@@ -3,6 +3,7 @@ package com.company.serviceImpl;
 import com.company.entity.Admin;
 import com.company.entity.Developer;
 //import com.company.exception.DeveloperNotFoundException;
+import com.company.exception.DeveloperNotFoundException;
 import com.company.helper.AddDataInExcel;
 import com.company.helper.ExcelDataRead;
 import com.company.helper.GenerateDeveloperId;
@@ -65,7 +66,7 @@ public class DeveloperServiceImpl implements DeveloperService {
     @Override
     public Developer getDeveloperById(int id) {
         //custom exception
-        Developer developer =  developerRepository.findById(id).orElseThrow(() -> new NullPointerException("Developer with id not found " + id));
+        Developer developer =  developerRepository.findById(id).orElseThrow(() -> new DeveloperNotFoundException("Developer with id not found " + id));
 
         return developer;
     }
@@ -197,8 +198,20 @@ public class DeveloperServiceImpl implements DeveloperService {
 
     @Override
     public List<Developer> getByAge(int age) {
-
         List<Developer> developers = developerRepository.filterByAge(age);
         return developers;
     }
+
+    @Override
+    public List<Developer> maxAge(int age) {
+        List<Developer> developerList = developerRepository.getDevByMaxAge(age);
+        return developerList;
+    }
+
+    @Override
+    public Developer devByName(String fname) {
+        Developer developer = developerRepository.devByName(fname);
+        return developer;
+    }
+
 }
