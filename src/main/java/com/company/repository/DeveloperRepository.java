@@ -42,4 +42,15 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
     @Query(value = "UPDATE Developer SET devloper_Id = :devId WHERE id = :id",nativeQuery = true)
     void updateIfDevIdMiss(@Param("id") int id , @Param("devId") String devId);
 
+    //Update the age of dev if today is dev's birthday
+    @Query(value = "SELECT * FROM Developer" + " WHERE MONTH(dob) = MONTH(CURDATE())" +
+            " AND DAY(dob) = DAY(CURDATE())",nativeQuery = true)
+    List<Developer> findTodaysBirthdays();
+
+    //Now update the birthday
+    @Transactional
+    @Modifying
+    @Query(value = "UPDATE Developer SET age = :age WHERE id = :id",nativeQuery = true)
+    void updateAgeBYBirthdate(@Param("id") int id, @Param("age") int age);
+
 }
