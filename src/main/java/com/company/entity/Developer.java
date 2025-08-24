@@ -29,7 +29,7 @@ public class Developer {
 
     private String lname;
 
-    //ignore age ,because it will calculated by springboot
+    //ignore age ,because it will calculated by springboot automaticallu
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private int age;
 
