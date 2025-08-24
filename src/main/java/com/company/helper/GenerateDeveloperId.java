@@ -4,6 +4,7 @@ import com.company.entity.Developer;
 import org.springframework.stereotype.Component;
 
 @Component
+//Because we will reuse this / if we mark it as component it will be loaded
 public class GenerateDeveloperId {
 
     public static String generateId(Developer developer) {
