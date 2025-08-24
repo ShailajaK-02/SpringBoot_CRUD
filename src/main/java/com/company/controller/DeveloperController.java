@@ -197,5 +197,4 @@ public class DeveloperController {
         Developer d = developerService.devByName(fname);
         return new ResponseEntity<>(d,HttpStatus.OK);
     }
-
 }
