@@ -32,7 +32,7 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
     @Query("DELETE FROM Developer d WHERE d.id = :id ")
     String deleteDevQuery(int id);
 
-    //update query if dev id is null for this first find all dev whose devid is null
+    //to update first find all dev whose devid is null
     @Query(value = "SELECT * FROM Developer WHERE devloper_Id IS NULL",nativeQuery = true)
     List<Developer>  findDevWithMissId();
 
@@ -47,7 +47,7 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
             " AND DAY(dob) = DAY(CURDATE())",nativeQuery = true)
     List<Developer> findTodaysBirthdays();
 
-    //Now update the birthday
+    //Now update the birthday for update we need id
     @Transactional
     @Modifying
     @Query(value = "UPDATE Developer SET age = :age WHERE id = :id",nativeQuery = true)
