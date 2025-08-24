@@ -10,12 +10,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-//    @ExceptionHandler(Exception.class)
-//    public ResponseEntity<String> handleAll(Exception ex) {
-//        ex.printStackTrace(); // optional: log it
-//        return ResponseEntity.internalServerError()
-//                .body("Something went wrong.");
-//    }
     @ExceptionHandler(DeveloperNotFoundException.class)
     public ResponseEntity<String> handleDevNotFoundException(DeveloperNotFoundException exception){
         return new ResponseEntity<>(exception.getMessage(), HttpStatus.NOT_FOUND);
