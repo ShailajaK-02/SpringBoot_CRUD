@@ -24,6 +24,7 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
     List<Developer> getDevByMaxAge(@Param("age") int age);
 
     //Native Query get dev by name
+    //native query -> sql query
     @Query(value = "SELECT * FROM Developer WHERE fname = :fname", nativeQuery = true)
     Developer devByName(@Param("fname") String fname);
 
