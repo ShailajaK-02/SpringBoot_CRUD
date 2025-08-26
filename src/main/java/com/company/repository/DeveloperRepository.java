@@ -48,7 +48,7 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
             " AND DAY(dob) = DAY(CURDATE())",nativeQuery = true)
     List<Developer> findTodaysBirthdays();
 
-    //Now update the birthday for update we need id
+    //Now update the birthday for update we need id of dev
     @Transactional
     @Modifying
     @Query(value = "UPDATE Developer SET age = :age WHERE id = :id",nativeQuery = true)
