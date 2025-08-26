@@ -43,7 +43,7 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
     @Query(value = "UPDATE Developer SET devloper_Id = :devId WHERE id = :id",nativeQuery = true)
     void updateIfDevIdMiss(@Param("id") int id , @Param("devId") String devId);
 
-    //Update the age of dev if today is dev's birthday
+    //Update the age of dev if today is dev's birthday using curdate
     @Query(value = "SELECT * FROM Developer" + " WHERE MONTH(dob) = MONTH(CURDATE())" +
             " AND DAY(dob) = DAY(CURDATE())",nativeQuery = true)
     List<Developer> findTodaysBirthdays();
