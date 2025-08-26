@@ -15,7 +15,7 @@ import java.util.List;
 public interface DeveloperRepository extends JpaRepository<Developer, Integer>
 {
 
-    //This is JPQL query
+    //This is JPQL query for age
     @Query("SELECT d FROM Developer d WHERE d.age = :age")
     List<Developer> filterByAge(@Param("age") int age);
 
@@ -52,5 +52,4 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
     @Modifying
     @Query(value = "UPDATE Developer SET age = :age WHERE id = :id",nativeQuery = true)
     void updateAgeBYBirthdate(@Param("id") int id, @Param("age") int age);
-
 }
