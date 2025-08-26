@@ -19,7 +19,7 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
     @Query("SELECT d FROM Developer d WHERE d.age = :age")
     List<Developer> filterByAge(@Param("age") int age);
 
-    //This jpql query finds developer whose age is greater than certain age
+    //This jpql query finds developer whose age is greater > certain age
     @Query("SELECT d FROM Developer d WHERE d.age > :age ")
     List<Developer> getDevByMaxAge(@Param("age") int age);
 
