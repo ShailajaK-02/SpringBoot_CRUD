@@ -33,7 +33,7 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
     @Query("DELETE FROM Developer d WHERE d.id = :id ")
     String deleteDevQuery(int id);
 
-    //to update first find all dev whose devid is null
+    //to update first find all dev whose devid is null from db
     @Query(value = "SELECT * FROM Developer WHERE devloper_Id IS NULL",nativeQuery = true)
     List<Developer>  findDevWithMissId();
 
