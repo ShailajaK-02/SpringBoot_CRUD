@@ -28,7 +28,7 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
     @Query(value = "SELECT * FROM Developer WHERE fname = :fname", nativeQuery = true)
     Developer devByName(@Param("fname") String fname);
 
-    //Custom query to delete using modifying + transactional
+    //Custom query to delete using modifying + transactional annotation
     @Modifying
     @Query("DELETE FROM Developer d WHERE d.id = :id ")
     String deleteDevQuery(int id);
