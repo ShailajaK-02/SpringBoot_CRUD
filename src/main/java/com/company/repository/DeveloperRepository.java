@@ -12,6 +12,7 @@ import java.util.List;
 
 @Repository
 //Here we write custom methods in which we can perform filteration ,
+//jpa is an interface
 public interface DeveloperRepository extends JpaRepository<Developer, Integer>
 {
 
