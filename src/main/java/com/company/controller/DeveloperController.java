@@ -86,8 +86,6 @@ public class DeveloperController {
         return ResponseEntity.ok("Deleted successfully");
     }
 
-
-
     //update data by id
     @PutMapping("/updateDev/{id}")
     public ResponseEntity<Developer> updateDev(@PathVariable("id") int id, @RequestBody Developer developer) {
