@@ -41,7 +41,7 @@ public class SimpleSchedulers {
             repository.updateIfDevIdMiss(d.getId(),devId);
         }
     }
-        //Task 2
+     //Task 2
        //2 --> create a schedular to update age by 1 if today is DOB of developer & store it in db
        //use custom JPQL query to update for this we have to use @Transactional annotation ,
        // and @Modifying annotation .
