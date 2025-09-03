@@ -175,7 +175,7 @@ public class DeveloperController {
                 .body(new InputStreamResource(in));
     }
 
-    //Query Filter by age using jpql query
+    //Query Filter by age using jpql query api
     @GetMapping("/getByAge/{age}")
     public ResponseEntity<List<Developer>> getByAge(@PathVariable("age") int age){
         List<Developer> developers = developerService.getByAge(age);
