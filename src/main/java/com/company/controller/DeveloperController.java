@@ -110,7 +110,7 @@ public class DeveloperController {
         return new ResponseEntity<>("List saved",HttpStatus.OK);
     }
 
-    //api to filter by city , filter by gender.
+    //api to filter by city , filter by gender api
     @GetMapping("/filter")
     public ResponseEntity<List<Developer>> filterByCity(@RequestParam(required = false) String city,@RequestParam(required = false) String gender){
 
