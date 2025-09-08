@@ -30,7 +30,6 @@ public class AddDataInExcel {
 
             //create cell
             for (int i = 0; i < columns.length; i++) {
-
                 Cell cell = row.createCell(i);
                 cell.setCellValue(columns[i]);
             }
