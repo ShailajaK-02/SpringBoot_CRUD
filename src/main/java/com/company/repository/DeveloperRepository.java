@@ -36,7 +36,8 @@ public interface DeveloperRepository extends JpaRepository<Developer, Integer>
 
     //to update first find all dev whose devid is null from db
     @Query(value = "SELECT * FROM Developer WHERE devloper_Id IS NULL",nativeQuery = true)
-    List<Developer>  findDevWithMissId();
+    List<Developer>
+    findDevWithMissId();
 
     //now here update the devid using annotation modifying and transactional
     @Transactional
