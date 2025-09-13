@@ -19,11 +19,6 @@ public class SimpleSchedulers {
     @Autowired
     private GenerateDeveloperId genId;
 
-//    //simple method to print message after 5 sec
-//    @Scheduled(fixedDelay = 5000)
-//    public void simpleprint(){
-//        System.err.println("Today is friday");
-//    }
 
     // 1 --> create a schedular to check if developer_id is missing
          //if it is missing then create again and store it in database
